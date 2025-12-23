@@ -28,7 +28,7 @@ app.use(express.urlencoded({extended: true}));
 
 
 // ===============================
-// 3. Session
+// 2. Session
 // ===============================
 
 
@@ -46,13 +46,20 @@ app.set("view engine", "ejs");
 // 4. Routes
 // ===============================
 
+//post method
+app.post("/create-item", (req, res) => {
+    console.log(req.body);
+    res.json({result: "Success! You have add a new item"});
+});
+
+//get method
 app.get("/", function(req, res) {
-res.end(`Hello World!`);
+    res.render("harid");
 });
 
 
 // ---- ---- ---- ----
-// 4. Server Configuration
+//Server Configuration
 
 // Create HTTP server
 const server = http.createServer(app);
