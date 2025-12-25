@@ -1,11 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Portfolio</title>
-</head>
-<body>
-    <h1>HELLO WORLD</h1>
-</body>
+  </head>
+
+  <body>
+    <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+
+                <div class="profile">
+                    <div class="profile_img">
+                        <img src="images/profile.jpg" width="156px" height="135px" alt="img">
+                    </div>
+                    <div class="profile_name"><%=user.name%></div>
+                    <div class="profile_profession"><%=user.profession%></div>
+                    <div class="profile_icons">
+                        <a class="link_href" href="">
+                            <div class="socialnet_icon">
+                                <img src="icons/facebook.svg" alt="facebook">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="socialnet_icon">
+                                <img src="icons/instagram.svg" alt="instagram">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="socialnet_icon">
+                                <img src="icons/twitter.svg" alt="twitter">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="socialnet_icon">
+                                <img src="icons/linkeding.svg" alt="twitter">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="socialnet_icon">
+                                <img src="icons/youtube.svg" alt="youtube">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="socialnet_icon">
+                                <img src="icons/dribbble.svg" alt="dribbble">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+
+                <div class="about">
+                    <div class="about_info_wrap">
+                        <div class="about_info_left">Age:</div>
+                        <div class="about_info_right"><%=user.age%></div>
+                    </div>    
+                    <div class="about_info_wrap">
+                        <div class="about_info_left">Residence:</div>
+                        <div class="about_info_right"><%=user.residence%></div>
+                    </div>    
+                    <div class="about_info_wrap">
+                        <div class="about_info_left">Freelance:</div>
+                        <div class="about_info_right color_green">Available</div>
+                    </div>    
+                    <div class="about_info_wrap">
+                        <div class="about_info_left">Address:</div>
+                        <div class="about_info_right"><%=user.address%></div>
+                    </div>    
+                </div>
+                <div class="marginer"></div>
+
+                <div class="language">
+                    <div class="left_frame_info_title">Language</div>
+                    <div class="language_items_wrap">
+                        <div class="the_language"><%=user.languages[0]%></div>
+                        <div class="the_language_percentage">100%</div>
+                    </div>
+                    <div class="percentage_border">
+                        <div class="the_percentage"></div>
+                    </div>
+
+                    <div class="language_items_wrap">
+                        <div class="the_language"><%=user.languages[1]%></div>
+                        <div class="the_language_percentage">60%</div>
+                    </div>
+                    <div class="percentage_border">
+                        <div class="the_percentage"></div>
+                    </div>
+
+                    <div class="language_items_wrap">
+                        <div class="the_language"><%=user.languages[2]%></div>
+                        <div class="the_language_percentage">80%</div>
+                    </div>
+                    <div class="percentage_border">
+                        <div class="the_percentage"></div>
+                    </div>
+
+                </div>
+                <div class="marginer"></div>
+
+                <div class="skills">
+
+                    <div class="left_frame_info_title">Skills</div>
+
+                    <div class="skills_items_wrap">
+                        <div class="the_skill"><%=user.skills[0]%></div>
+                        <div class="the_skill_percentage">100%</div>
+                    </div>
+                    <div class="percentage_border">
+                        <div class="the_percentage"></div>
+                    </div>
+
+                    <div class="skills_items_wrap">
+                        <div class="the_skill"><%=user.skills[1]%></div>
+                        <div class="the_skill_percentage">100%</div>
+                    </div>
+                    <div class="percentage_border">
+                        <div class="the_percentage"></div>
+                    </div>
+
+                    <div class="skills_items_wrap">
+                        <div class="the_skill"><%=user.skills[2]%></div>
+                        <div class="the_skill_percentage">80%</div>
+                    </div>
+                    <div class="percentage_border">
+                        <div class="the_percentage"></div>
+                    </div>
+
+                    <div class="skills_items_wrap">
+                        <div class="the_skill"><%=user.skills[3]%></div>
+                        <div class="the_skill_percentage">80%</div>
+                    </div>
+                    <div class="percentage_border">
+                        <div class="the_percentage"></div>
+                    </div>
+
+                    <div class="skills_items_wrap">
+                        <div class="the_skill"><%=user.skills[4]%></div>
+                        <div class="the_skill_percentage">60%</div>
+                    </div>
+                    <div class="percentage_border">
+                        <div class="the_percentage"></div>
+                    </div>
+
+                </div>
+                <div class="marginer"></div>
+
+                <div class="extra_skills">
+                    <div class="left_frame_info_title">Extra Skills</div>
+
+                    <div class="extra_skills_items_wrap">
+                        <div class="extskill_icon">
+                            <img src="icons/extra-skill.png" alt="">
+                        </div>
+                        <div class="the_extskill_wrap">
+                            <div class="the_extskill"><%=user.extra_skills[0]%></div>
+                        </div>
+                    </div>
+
+                    <div class="extra_skills_items_wrap">
+                        <div class="extskill_icon">
+                            <img src="icons/extra-skill.png" alt="">
+                        </div>
+                        <div class="the_extskill_wrap">
+                            <div class="the_extskill"><%=user.extra_skills[1]%></div>
+                        </div>
+                    </div>
+
+                    <div class="extra_skills_items_wrap">
+                        <div class="extskill_icon">
+                            <img src="icons/extra-skill.png" alt="">
+                        </div>
+                        <div class="the_extskill_wrap">
+                            <div class="the_extskill"><%=user.extra_skills[2]%></div>
+                        </div>
+                    </div>
+
+                    <div class="extra_skills_items_wrap">
+                        <div class="extskill_icon">
+                            <img src="icons/extra-skill.png" alt="">
+                        </div>
+                        <div class="the_extskill_wrap">
+                            <div class="the_extskill"><%=user.extra_skills[3]%></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="marginer"></div>
+
+            </div>
+
+            <div class="middle_frame">
+                <div class="hero_container">
+                    <div class="hero_infos_wrap">
+                        <div class="hero_title"><%=user.service_desc%></div>
+                        <div class="hero_text"><%=user.about_me%></div>
+                        <button class="hero_button"> HIRE ME -></button>
+                    </div>
+                    <div class="hero_img">
+                        <img src="images/hero.png" alt="hero-img">
+                    </div>
+                </div>
+
+                <div class="services_container">
+                    <div class="services_title">My services</div>
+                    <div class="services_desc">
+                        Amet minim mollit non deserunt 
+                        ullamco est sit aliqua dolor do amet sint. 
+                        Velit officia consequat duis enim velit mollit. lorem ipsum
+                    </div>
+                    
+                    <div class="services_box_container">
+                        <div class="services_box">
+                            <div class="services_icon">
+                                <img src="box-images/coding.png" alt="">
+                            </div>
+                            <div class="services_name">Web development</div>
+                            <div class="services_info">Blog, E-commerce</div>
+                        </div>
+
+                        <div class="services_box">
+                            <div class="services_icon">
+                                <img src="box-images/illustration.png" alt="">
+                            </div>
+                            <div class="services_name">UI, UX Design</div>
+                            <div class="services_info">Mobile app, Web design</div>
+                        </div>
+
+                        <div class="services_box">
+                            <div class="services_icon">
+                                <img src="box-images/microphone.png" alt="">
+                            </div>
+                            <div class="services_name">Sound design</div>
+                            <div class="services_info">Voice Over, Beat Making </div>
+                        </div>
+
+                        <div class="services_box">
+                            <div class="services_icon">
+                                <img src="box-images/game-development.png" alt="">
+                            </div>
+                            <div class="services_name">Game design</div>
+                            <div class="services_info">Character Design, Props & Object</div>
+                        </div>
+
+                        <div class="services_box">
+                            <div class="services_icon">
+                                <img src="box-images/photographer.png" alt="">
+                            </div>
+                            <div class="services_name">Photography</div>
+                            <div class="services_info">portrait, product photography</div>
+                        </div>
+
+                        <div class="services_box">
+                            <div class="services_name">Advertising</div>
+                            <div class="services_info"> 
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit.
+                                Vitae nulla diam in ac dictum a urna viverra
+                            </div>
+                            <a class="services_order" href=""> ORDER NOW ></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="right_frame">
+                <div class="top_icon">
+                    <img src="menu-icons/contrast.png" alt="">
+                </div>
+
+                <div class="midd_icons">
+                    <div class="midd_the_icon">
+                        <img src="menu-icons/home.png" alt="">
+                    </div>
+                    <div class="midd_the_icon">
+                        <img src="menu-icons/file-code.png" alt="">
+                    </div>
+                    <div class="midd_the_icon">
+                        <img src="menu-icons/cv.png" alt="">
+                    </div>
+                    <div class="midd_the_icon">
+                        <img src="menu-icons/vector.png" alt="">
+                    </div>
+                    <div class="midd_the_icon">
+                        <img src="menu-icons/contact.png" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>

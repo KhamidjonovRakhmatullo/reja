@@ -1,0 +1,513 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*BODY FRAME*/
+.frame {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(217, 217, 217, 1);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*MAIN FRAME*/
+.main_frame {
+  width: 1440px;
+  height: 1312px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2px;
+  background-color: #e5e5e5;
+}
+
+/*LEFT FRAME*/
+.main_frame .left_frame {
+  position: relative;
+  width: 305px;
+  height: 1315px;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/*MIDDLE FRAME*/
+.main_frame .middle_frame {
+  position: relative;
+  width: 970px;
+  height: 1259px;
+  margin: 0px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*RIGHT FRAME*/
+.main_frame .right_frame {
+  position: relative;
+  width: 108px;
+  height: 1315px;
+  box-shadow: 4px 0px 10px 0px rgba(47, 122, 249, 0.1);
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+/* MARGINER */
+.main_frame .left_frame .marginer {
+  position: relative;
+  width: 220px;
+  height: 1px;
+  background-color: rgba(217, 217, 217, 1);
+  margin: 0px 30px 0px 47px;
+}
+
+/* ------------------  LEFT FRAME  -----------------*/
+/* ------------------  Profile  -------------------*/
+.main_frame .left_frame .profile {
+  position: relative;
+  width: 228px;
+  height: 267px;
+  margin: 47px 30px 50px 47px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_frame .left_frame .profile .profile_img {
+  width: 156.16px;
+  height: 135.05px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+
+.main_frame .left_frame .profile .profile_name {
+  font-family: Inter;
+  font-style: Medium;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .left_frame .profile .profile_profession {
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+  color: rgb(158, 154, 154);
+}
+
+.main_frame .left_frame .profile .profile_icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 238px;
+  margin-top: 19px;
+}
+
+.main_frame .left_frame .profile .link_href {
+  color: black;
+  text-decoration: none;
+}
+
+.main_frame .left_frame .profile .link_href .socialnet_icon {
+  position: relative;
+  width: 24.99px;
+  height: 21.61px;
+  border-radius: 50%;
+  filter: drop-shadow(0 4px 4px rgba (0, 0, 0, 0.25));
+  background: 口#FFB400;
+}
+
+/* ------------------ ABOUT  -------------------*/
+.main_frame .left_frame .about {
+  position: relative;
+  width: 221px;
+  height: 126px;
+  margin: 24px 38px 24px 47px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_frame .left_frame .about .about_info_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.main_frame .left_frame .about .about_info_wrap .about_info_left {
+  background-color: #ffb400;
+  padding: 1px 6px 1px 3px;
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .left_frame .about .about_info_wrap .about_info_right {
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.color_green {
+  color: rgba(52, 140, 51, 0.518);
+}
+
+/* ------------------ Language  -------------------*/
+.main_frame .left_frame .language {
+  position: relative;
+  width: 220px;
+  height: 153px;
+  margin: 24px 38px 12px 47px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left_frame_info_title {
+  font-family: Inter;
+  font-style: Medium;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+
+.main_frame .left_frame .language .language_items_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.main_frame .left_frame .language .the_language {
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+  color: rgb(158, 154, 154);
+}
+
+.main_frame .left_frame .language .the_language_percentage {
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+  color: rgb(158, 154, 154);
+}
+
+.percentage_border {
+  border: 1px solid #ffb400;
+  border-radius: 30px;
+  width: 218px;
+  height: 4px;
+  padding: 2.5px;
+  display: flex;
+  align-items: center;
+}
+
+.the_percentage {
+  width: 216.5px;
+  height: 3px;
+  border-radius: 30px;
+  background-color: #ffb400;
+}
+
+/* ------------------ Skills  -------------------*/
+.main_frame .left_frame .skills {
+  position: relative;
+  width: 220px;
+  height: 242px;
+  margin: 24px 38px 16px 47px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_frame .left_frame .skills .skills_items_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.main_frame .left_frame .skills .the_skill {
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+  color: rgb(158, 154, 154);
+}
+
+.main_frame .left_frame .skills .the_skill_percentage {
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+  color: rgb(158, 154, 154);
+}
+
+/* ------------------ Extra Skills  -------------------*/
+.main_frame .left_frame .extra_skills {
+  position: relative;
+  margin: 24px 38px 24px 47px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.main_frame .left_frame .extra_skills .extra_skills_items_wrap {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.main_frame .left_frame .extra_skills .extra_skills_items_wrap .extskill_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_frame
+  .left_frame
+  .extra_skills
+  .extra_skills_items_wrap
+  .the_extskill_wrap {
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+  color: rgb(158, 154, 154);
+}
+
+/* ------------------ MIDDLE FRAME  -------------------*/
+/* ------------------ Hero container  -------------------*/
+.main_frame .middle_frame .hero_container {
+  background-color: #ffff;
+  width: 971px;
+  height: 454.33px;
+  padding: 0px 60px;
+  display: flex;
+}
+
+.main_frame .middle_frame .hero_container .hero_infos_wrap {
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-end;
+  margin-bottom: 60px;
+}
+
+.main_frame .middle_frame .hero_container .hero_title {
+  font-family: Inter;
+  font-style: Bold;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  width: 499.51px;
+}
+
+.main_frame .middle_frame .hero_container .hero_text {
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+  color: rgb(158, 154, 154);
+  width: 424.44px;
+  margin-top: 17px;
+}
+
+.main_frame .middle_frame .hero_container .hero_button {
+  width: 154px;
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px 16px 32px;
+  background-color: #ffb400;
+  cursor: pointer;
+  margin-top: 22px;
+  border-radius: 5px;
+  border: none;
+
+  font-family: Inter;
+  font-style: Medium;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.main_frame .middle_frame .hero_container .hero_img {
+  flex: 5;
+  width: 326.06px;
+  height: 446.63px;
+}
+
+/* ------------------ Hero container  -------------------*/
+.main_frame .middle_frame .services_container {
+  margin-top: 148px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_frame .middle_frame .services_title {
+  font-family: Inter;
+  font-style: Bold;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .middle_frame .services_desc {
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+  color: rgb(158, 154, 154);
+  margin-top: 26px;
+  margin-bottom: 50px;
+  width: 438px;
+}
+
+.main_frame .middle_frame .services_box_container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 12px;
+}
+
+.main_frame .middle_frame .services_box {
+  background-color: #ffff;
+  width: 310px;
+  height: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 28px;
+}
+
+.main_frame .middle_frame .services_name {
+  font-family: Inter;
+  font-style: Medium;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+  margin-top: 26px;
+  margin-bottom: 15px;
+}
+
+.main_frame .middle_frame .services_info {
+  font-family: Inter;
+  font-style: Regular;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+  color: rgb(158, 154, 154);
+}
+
+.main_frame .middle_frame .services_order {
+    font-family: Roboto;
+    font-style: Bold;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: left;
+    color: #FFB400;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.main_frame .right_frame .top_icon {
+    margin-top: 50px;
+    margin-bottom: 150px;
+    border-radius: 50%;
+}
+
+.main_frame .right_frame .midd_icons {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ height: 493px;
+ }
+
+.main_frame .right_frame .midd_the_icon {
+    padding: 11px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
