@@ -134,6 +134,10 @@
   border-radius: 50%;
   filter: drop-shadow(0 4px 4px rgba (0, 0, 0, 0.25));
   background: 口#FFB400;
+  :hover {
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+};
 }
 
 /* ------------------ ABOUT  -------------------*/
@@ -383,7 +387,15 @@
   cursor: pointer;
   margin-top: 22px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid #ffb400;
+  transition: 0.3s;
+  &:hover {
+    background-color: #ffff;
+    border: 1px solid #ffb400; 
+    color: #FFB400;
+    transition: 0.5s ease;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+};
 
   font-family: Inter;
   font-style: Medium;
@@ -400,7 +412,7 @@
   height: 446.63px;
 }
 
-/* ------------------ Hero container  -------------------*/
+/* ------------------ Services container  -------------------*/
 .main_frame .middle_frame .services_container {
   margin-top: 148px;
   display: flex;
@@ -477,37 +489,48 @@
 }
 
 .main_frame .middle_frame .services_order {
-    font-family: Roboto;
-    font-style: Bold;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14px;
-    letter-spacing: 0%;
-    text-align: left;
-    color: #FFB400;
-    text-decoration: none;
-    margin-top: 20px;
+  font-family: Roboto;
+  font-style: Bold;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #ffb400;
+  text-decoration: none;
+  margin-top: 20px;
+  border-bottom: none;
+  &:hover {
+  border-bottom: 1px solid #ffb400;
+};
 }
 
+/* ------------------ Right  -------------------*/
 .main_frame .right_frame .top_icon {
-    margin-top: 50px;
-    margin-bottom: 150px;
-    border-radius: 50%;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  border-radius: 50%;
 }
 
 .main_frame .right_frame .midd_icons {
- display: flex;
- flex-direction: column;
- justify-content: space-around;
- height: 493px;
- }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 493px;
+}
 
 .main_frame .right_frame .midd_the_icon {
-    padding: 11px;
-    background-color: #e5e5e5;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 11px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  &:hover {
+    background-color: #FFB400;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+};
 }
