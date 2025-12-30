@@ -3,6 +3,26 @@
 
 // A - TASK
 
+/*
+A-TASK: 
+Shunday 2 parametrli function tuzing, 
+hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
+MASALAN countLetter("e", "engineer") 3ni return qiladi.
+ */
+
+function countLetter(letter, word){
+    let count = 0;
+
+    for(let i = 0; i < word.length; i++){
+        if(word[i] === letter){
+            count++;
+        }
+    }
+    return count;
+}
+
+const result = countLetter("a", "alan");
+console.log(result);
 
 
 
@@ -15,7 +35,7 @@
 //        Callback & Async Functions — Jack Ma
 // -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 
-console.log("Jack Ma maslahatlari!");
+// console.log("Jack Ma maslahatlari!");
 
 // data
 const list = [
@@ -58,17 +78,17 @@ function maslahatBering(yosh, callback){
 };
 
 // call func
-console.log("passed here: 0");
+// console.log("passed here: 0");
 
-maslahatBering(66, (err, data) => {
-    if(err) console.log("Error: ", err);
-    // console.log("Javob:", data)
-    else(
-        console.log("Javob:", data)
-    );
-});
+// maslahatBering(66, (err, data) => {
+//     if(err) console.log("Error: ", err);
+//     // console.log("Javob:", data)
+//     else(
+//         console.log("Javob:", data)
+//     );
+// });
 
-console.log("passed here: 1");
+// console.log("passed here: 1");
 
 // ======================================= END Callback ===============================================
 
