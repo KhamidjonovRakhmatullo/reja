@@ -1,5 +1,43 @@
 // console.log("run TRAIN")
+
+
 // B - TASK
+
+/*
+Shunday function tuzing, u 1ta string parametrga ega bolsin, 
+hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin. 
+MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.\n\n@MITASK 
+*/
+
+function countDigits(str){
+    let count = 0;
+
+    for(let i = 0; i < str.length; i++){
+        let currentChar = str[i];
+        // console.log("curr: ", currentChar)
+        
+        if("0" <= currentChar && currentChar <= "9"){
+            count++
+        };
+    };
+    return count
+};
+
+const result = countDigits("ad2a54y79wet0sfgb9");
+console.log("result:", result);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // A - TASK
 
