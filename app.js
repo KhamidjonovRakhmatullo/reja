@@ -8,14 +8,15 @@ const fs = require("fs");
 const db = require("./server").db();
 
 
-let user;
-fs.readFile("database/user.json", "utf8", (err, data) => {
-    if (err){ 
-        console.log("Error:", err);
-    } else{
-        user = JSON.parse(data);
-    };
-});
+// let user;
+// fs.readFile("database/user.json", "utf8", (err, data) => {
+//     if (err){ 
+//         console.log("Error:", err);
+//     } else{
+//         user = JSON.parse(data);
+//     };
+// });
+
 
 // 1. Middleware (Request Processing)
 app.use(express.static("public"));
@@ -30,18 +31,55 @@ app.set("view engine", "ejs");
 
 
 // 4. Routes (Request Handlers)
-app.post("/create-item", (req, res) => {
+app.post("/create-plan", (req, res) => {
+
+    console.log("User entered to /create-plan");
+
+    //code with db here
     console.log(req.body);
-    res.json({result: "Success! You have add a new item"});
+    const new_reja = req.body.reja_input
+    
+    db.collection("plans0").insertOne({reja1: new_reja}, (err, data) => {
+        if(err){
+            console.log(err);
+            res.end("Something went wrong while adding your plan")
+        }else{
+            res.end("Your plan was successfully added!");
+        };
+    });
 });
 
-app.get("/author", (req, res) => {
-    res.render("author", {user: user});
-});
+/*
+   /create-plan  =>  shu action ga ega bo'lgan form ga yoz
+
+   req.body      =>  req.body dan kelayotgan hamma input ma'lumotlar
+
+   reja_input    =>  ayni shu name ga ega bo'lgan input ga kelgan ma'lumot
+
+   plans0        =>  Reja folder ichiga plans0 deb nomlab collection och va yoz
+
+   reja1         =>  reja1 degan "key / nom" bilan "value / qiymat"ni yoz! 
+*/
+
+
+// app.get("/author", (req, res) => {
+//     res.render("author", {user: user});
+// });
 
 
 app.get("/", function(req, res) {
-    res.render("reja");
+    console.log("User entered to /");
+    db.collection("plans0")
+    .find()
+    .toArray((err, data) => {
+        if(err){
+            console.log(err);
+            res.end("Something went wrong while reading your plan");
+        }else{
+            // console.log("data /get:", data);
+            res.render("reja", {items: data});
+        }
+    });
 });
 
 module.exports = app;
