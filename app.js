@@ -32,20 +32,15 @@ app.set("view engine", "ejs");
 
 // 4. Routes (Request Handlers)
 app.post("/create-plan", (req, res) => {
-
     console.log("User entered to /create-plan");
 
     //code with db here
     console.log(req.body);
     const new_reja = req.body.reja_input
     
-    db.collection("plans0").insertOne({reja1: new_reja}, (err, data) => {
-        if(err){
-            console.log(err);
-            res.end("Something went wrong while adding your plan")
-        }else{
-            res.end("Your plan was successfully added!");
-        };
+    db.collection("plans0").insertOne({ reja1: new_reja}, (err, data) => {
+        console.log(data.ops);
+        res.json(data.ops[0]);
     });
 });
 
