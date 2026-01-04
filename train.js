@@ -1,5 +1,46 @@
 // console.log("run TRAIN")
 
+// C-TASK
+
+/*
+Shunday function tuzing, u 2ta string parametr ega bolsin, 
+hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin. 
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true.
+*/
+
+function checkContent(str1, str2) {
+    if (str1.length !== str2.length) return false;
+
+    return str1.split('').sort().join('') === str2.split('').sort().join('');
+};
+
+console.log(checkContent("mitgroup", "gmtiprou")); // true
+console.log(checkContent("hello", "olelh")); // true
+console.log(checkContent("abc", "abcc")); // false
+console.log(checkContent("abc", "abd")); // false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // B - TASK
 
@@ -9,22 +50,22 @@ hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.\n\n@MITASK 
 */
 
-function countDigits(str){
-    let count = 0;
+// function countDigits(str){
+//     let count = 0;
 
-    for(let i = 0; i < str.length; i++){
-        let currentChar = str[i];
-        // console.log("curr: ", currentChar)
+//     for(let i = 0; i < str.length; i++){
+//         let currentChar = str[i];
+//         // console.log("curr: ", currentChar)
         
-        if("0" <= currentChar && currentChar <= "9"){
-            count++
-        };
-    };
-    return count
-};
+//         if("0" <= currentChar && currentChar <= "9"){
+//             count++
+//         };
+//     };
+//     return count
+// };
 
-const result = countDigits("ad2a54y79wet0sfgb9");
-console.log("result:", result);
+// const result = countDigits("ad2a54y79wet0sfgb9");
+// console.log("result:", result);
 
 
 
