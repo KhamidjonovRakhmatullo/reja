@@ -2,10 +2,12 @@ console.log("Web server run!");
 const express = require("express");
 const app = express();
 const fs = require("fs");
+const mongodb = require("mongodb");
 
 
 // MongoDB call
-const db = require("./server").db();
+const client = require("./server"); //TCP
+const db = client.db(); //QALAM 
 
 
 // let user;
@@ -31,6 +33,8 @@ app.set("view engine", "ejs");
 
 
 // 4. Routes (Request Handlers)
+
+//create
 app.post("/create-plan", (req, res) => {
     console.log("User entered to /create-plan");
 
@@ -38,7 +42,8 @@ app.post("/create-plan", (req, res) => {
     console.log(req.body);
     const new_reja = req.body.reja_input
     
-    db.collection("plans0").insertOne({ reja1: new_reja}, (err, data) => {
+    db.collection("plans0")
+    .insertOne({ reja1: new_reja}, (err, data) => {
         console.log(data.ops);
         res.json(data.ops[0]);
     });
@@ -56,6 +61,17 @@ app.post("/create-plan", (req, res) => {
    reja1         =>  reja1 degan "key / nom" bilan "value / qiymat"ni yoz! 
 */
 
+//delete
+app.post("/delete-plan", (req, res) => {
+    const id = req.body.id;
+    console.log("id:", id);
+
+    db.collection("plans0")
+    .deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data){
+        res.json({state: "success"});
+    });
+});
+
 
 // app.get("/author", (req, res) => {
 //     res.render("author", {user: user});
@@ -65,9 +81,9 @@ app.post("/create-plan", (req, res) => {
 app.get("/", function(req, res) {
     console.log("User entered to /");
     db.collection("plans0")
-    .find()
+    .find() 
     .toArray((err, data) => {
-        if(err){
+        if(err){ 
             console.log(err);
             res.end("Something went wrong while reading your plan");
         }else{
